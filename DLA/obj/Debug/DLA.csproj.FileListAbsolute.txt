@@ -1,0 +1,4 @@
+C:\Users\Oleg\Documents\GitHub\Framework\DLA\bin\Debug\DLA.dll
+C:\Users\Oleg\Documents\GitHub\Framework\DLA\bin\Debug\DLA.pdb
+C:\Users\Oleg\Documents\GitHub\Framework\DLA\obj\Debug\DLA.dll
+C:\Users\Oleg\Documents\GitHub\Framework\DLA\obj\Debug\DLA.pdb
