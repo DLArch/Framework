@@ -167,6 +167,7 @@ namespace DLA
                     /// Вытаскивание конструкторов из класса и вызов 0ого.
                     /// TODO: Конкретизировать выбор конструктора
                     ///
+
                     this.AssemblyConstructorType = this.MethodAssembly.GetType("Method.Method");
                     this.ClassConstructors = this.AssemblyConstructorType.GetConstructors();
                     //System.Reflection.ConstructorInfo ci = ti.GetConstructor(new Type[1] { tis/*this.TemporaryFile.GetType()*//*, true.GetType()*/});
