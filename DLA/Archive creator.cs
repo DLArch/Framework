@@ -134,6 +134,9 @@ namespace DLA
                     this.TemporaryFile = System.IO.Path.GetTempFileName();
 
                     this.StreamOfBaseFile = new System.IO.FileStream(path, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+
+                    ++StreamOfBaseFile.Position;
+
                     this.TemporaryFileStream = System.IO.File.Create(this.TemporaryFile);
 
                     this.NeededAssembly = System.Environment.CurrentDirectory + System.IO.Path.DirectorySeparatorChar + AssemblysFolderName + System.IO.Path.DirectorySeparatorChar + @"M" + this.MethodIndex + @".dll";
@@ -191,8 +194,6 @@ namespace DLA
                         }
                         this.TemporaryFile = path;
                     }
-                    this.TemporaryFileStream.Flush();
-                    this.StreamOfBaseFile.Flush();
                     this.TemporaryFileStream.Close();
                     this.StreamOfBaseFile.Close();
 

@@ -1,5 +1,4 @@
 C:\Users\Oleg\Documents\GitHub\Framework\DLA\bin\Release\DLA.dll
 C:\Users\Oleg\Documents\GitHub\Framework\DLA\bin\Release\DLA.pdb
-C:\Users\Oleg\Documents\GitHub\Framework\DLA\obj\Release\DLA.csprojResolveAssemblyReference.cache
 C:\Users\Oleg\Documents\GitHub\Framework\DLA\obj\Release\DLA.dll
 C:\Users\Oleg\Documents\GitHub\Framework\DLA\obj\Release\DLA.pdb
