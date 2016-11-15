@@ -32,7 +32,7 @@ namespace DLA
                     Compress(z, Wr);
                 }
             }
-            catch (System.Security.SecurityException)
+            catch //(System.Security.SecurityException)
             {
                 Console.WriteLine("Except: Отказанно в доступе к папке: {0}", Spath);
             }
@@ -260,7 +260,7 @@ namespace DLA
                         Compress(npath, BinFileWriter);
                     }
                 }
-                catch (System.Security.SecurityException)
+                catch //(System.Security.SecurityException)
                 {
                     Console.WriteLine("Except: Отказанно в доступе к папке: {0}", path);
                 }
