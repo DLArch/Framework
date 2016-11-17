@@ -238,6 +238,10 @@ namespace DLA
                 }
             }
             while (BinFileReader.BaseStream.Position < BinFileReader.BaseStream.Length);
+            /*if (BinFileReader.BaseStream.Position < BinFileReader.BaseStream.Length)
+            {
+                MakeFileFromArchive(Path, BinFileReader, FileInfo);
+            }*/
         }
         public string NeededAssembly
         {

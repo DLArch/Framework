@@ -32,7 +32,7 @@ namespace DLA
                     Compress(z, Wr);
                 }
             }
-            catch //(System.Security.SecurityException)
+            catch (System.Security.SecurityException)
             {
                 Console.WriteLine("Except: Отказанно в доступе к папке: {0}", Spath);
             }
@@ -99,7 +99,7 @@ namespace DLA
                 BinFileWriter.Close();
                 StreamOfCreatedFile.Close();
             }
-
+            /*
             if (System.IO.File.Exists(this.TemporaryFile))
             {
                 System.IO.File.Delete(this.TemporaryFile);
@@ -108,6 +108,7 @@ namespace DLA
             {
                 System.IO.Directory.Delete(this.TemporaryFolder);
             }
+            */
         }
         /// <summary>
         /// Сжимает папку/файл
@@ -149,7 +150,7 @@ namespace DLA
                         }
                         else
                         {
-                            Console.WriteLine("Файл отсутствуeт: {1} Переустановите программу!", this.NeededAssembly);
+                            Console.WriteLine("Сборка отсутствуeт: {1} Переустановите программу!", this.NeededAssembly);
                             throw new Exception();
                         }
                     }
@@ -170,7 +171,6 @@ namespace DLA
 
                     this.AssemblyConstructorType = this.MethodAssembly.GetType("Method.Method");
                     this.ClassConstructors = this.AssemblyConstructorType.GetConstructors();
-                    //System.Reflection.ConstructorInfo ci = ti.GetConstructor(new Type[1] { tis/*this.TemporaryFile.GetType()*//*, true.GetType()*/});
 
                     if (this.ClassConstructors != null && ClassConstructors.Count() > 0)
                     {
@@ -200,7 +200,7 @@ namespace DLA
 
                     this.StreamOfBaseFile = new System.IO.FileStream(this.TemporaryFile, System.IO.FileMode.Open, System.IO.FileAccess.Read);
                 }
-                catch (System.IO.IOException)
+                catch (System.UnauthorizedAccessException)//(System.IO.IOException)
                 {
                     Console.WriteLine("Невозможно получить доступ к файлу: " + path);
                     Console.WriteLine("Продолжить работу с ошибкой [y/n]");
@@ -260,7 +260,7 @@ namespace DLA
                         Compress(npath, BinFileWriter);
                     }
                 }
-                catch //(System.Security.SecurityException)
+                catch (System.Security.SecurityException)
                 {
                     Console.WriteLine("Except: Отказанно в доступе к папке: {0}", path);
                 }
