@@ -38,7 +38,7 @@ namespace DLA
                 System.Environment.CurrentDirectory += System.IO.Path.DirectorySeparatorChar + DestinationPath;
             }
 
-            BufferedFileInfo FileInfo = new BufferedFileInfo();
+            DLA.BufferedFileInfo FileInfo = new DLA.BufferedFileInfo();
 
             FileInfo.LogFileHandle = BinLogWriter;
 
@@ -50,7 +50,7 @@ namespace DLA
             BinLogWriter.Close();
             StreamOfLog.Close();
         }
-        public void MakeFileFromArchive(string Path, System.IO.BinaryReader BinFileReader, BufferedFileInfo FileInfo)
+        public void MakeFileFromArchive(string Path, System.IO.BinaryReader BinFileReader, DLA.BufferedFileInfo FileInfo)
         {
             do
             {
@@ -179,6 +179,7 @@ namespace DLA
                                         if (this.ClassConstructors != null && ClassConstructors.Count() > 0)
                                         {
                                             this.ClassConstructors[0].Invoke(new object[3] { bFS, DestinationFileStream, false });
+                                            //new ar.Method(bFS, DestinationFileStream, false);
                                         }
                                         else
                                         {

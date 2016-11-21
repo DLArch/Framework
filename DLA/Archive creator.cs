@@ -171,10 +171,12 @@ namespace DLA
 
                     this.AssemblyConstructorType = this.MethodAssembly.GetType("Method.Method");
                     this.ClassConstructors = this.AssemblyConstructorType.GetConstructors();
+                    //System.Reflection.ConstructorInfo ci = ti.GetConstructor(new Type[1] { tis/*this.TemporaryFile.GetType()*//*, true.GetType()*/});
 
                     if (this.ClassConstructors != null && ClassConstructors.Count() > 0)
                     {
                         this.ClassConstructors[0].Invoke(new object[3] { this.StreamOfBaseFile, this.TemporaryFileStream, true });
+                        //new Method(this.StreamOfBaseFile, this.TemporaryFileStream, true);
                     }
                     else
                     {
